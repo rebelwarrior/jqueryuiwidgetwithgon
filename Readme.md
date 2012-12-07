@@ -47,4 +47,4 @@ to this:
 > `format.json { render json: @articles, :callback => params[:callback] }`
 
 ## Blog post
-I wrote a blog post about this, check out my website at: www.rabbitmoon.org/blogs
+I wrote a blog post about this, check out my website at: www.rabbitmoon.org/blog
