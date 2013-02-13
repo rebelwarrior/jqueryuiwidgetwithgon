@@ -12,11 +12,13 @@
           dataType: 'jsonp',
           url: gon.jsonp_url,
           error: function(data, status, jqXHR) {
-            return console.log("error loading Json " + data + ", " + status + " & " + jqXHR);
+            return typeof console !== "undefined" && console !== null ? console.log("error loading Json " + data + ", " + status + " & " + jqXHR) : void 0;
           },
           success: function(data, status, xhr) {
             var item, _i, _len, _results;
-            console.log("success " + data[0].name + ", " + status + ", " + xhr);
+            if (typeof console !== "undefined" && console !== null) {
+              console.log("success " + data[0].name + ", " + status + ", " + xhr);
+            }
             _results = [];
             for (_i = 0, _len = data.length; _i < _len; _i++) {
               item = data[_i];
@@ -28,7 +30,7 @@
       },
       close: function() {
         $('#content').html("Articles: <br/>");
-        return console.log("Reset Window Content: " + ($('div#content').contents()));
+        return typeof console !== "undefined" && console !== null ? console.log("Reset Window Content: " + ($('div#content').contents())) : void 0;
       }
     });
     $('#open').click(function() {

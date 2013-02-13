@@ -1,6 +1,7 @@
 # to use Jquery put it in the helpers file, add it to jasmine.yml file and 
 # add jasmine-jquery.js as well
 
+
 describe "ajax", ->
   $('#open').trigger("ajax:success", ["First Article"])
 
@@ -8,6 +9,8 @@ describe "ajax", ->
 
       
 describe "JSON DATA", ->
+  beforeEach ->
+    loadFixtures('index.html')
   it "should get correct data", (answer=null)->
     answer = ->
       $.ajax(
