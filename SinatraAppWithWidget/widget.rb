@@ -7,7 +7,7 @@ before do
   if settings.environment === :development || settings.environment === :test
     @jsonp_url = 'http://localhost:3000/articles.json'
   else
-    halt  
+    halt # Substitude this with your own @jsonp_url for production.  
   end  
 end
  
